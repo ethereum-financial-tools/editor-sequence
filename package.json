@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "financial-tools",
+  "name": "sequence-editor",
   "version": "0.0.0",
-  "description": "financial tools for the ethereum ecosystem",
+  "description": "editor for mermaid sequence diagrams",
   "main": "src/index.js",
   "scripts": {
     "start": "budo demo.js:bundle.js --dir . --title $npm_package_name --force-default-index --ssl --live --open",
@@ -13,17 +13,20 @@
     "ethereum",
     "finance",
     "accounting",
-    "tools"
+    "tools",
+    "sequence",
+    "diagram",
+    "editor"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethereum-financial-tools/ethereum-financial-tools.github.io.git"
+    "url": "git+https://github.com/ethereum-financial-tools/sequence-editor.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ethereum/ethereum-financial-tools/issues"
+    "url": "https://github.com/ethereum/financial-tools/issues"
   },
-  "homepage": "https://github.com/ethereum/ethereum-financial-tools",
+  "homepage": "https://ethereum-financial-tools.github.io/sequence-editor/",
   "devDependencies": {
     "budo": "^11.6.0"
   },

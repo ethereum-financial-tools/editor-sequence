@@ -7,7 +7,6 @@ module.exports = landingpage
 async function landingpage ({ title }) {
   const url = new URL('/procedures/ef-workflow.sequence', location.origin).href
   const template = await fetch(url).then(response => response.text())
-  console.log(template)
 
   var diagram = localStorage.diagram || (localStorage.diagram = template)
   var counter = 1
@@ -17,13 +16,12 @@ async function landingpage ({ title }) {
   ] = [
     bel`<textarea class=${css.diagram}>${diagram}</textarea>`,
     bel`<button class=${css.button} onclick=${_ => render(textarea.value)}>render</button>`,
-    bel`<button class=${css.button} onclick=${reset}>reset<input type="checkbox"></button>`,
+    bel`<button class=${css.button} onclick=${reset}>reset</button>`,
     bel`<div class=${css.view}></div>`
   ]
   render(localStorage.diagram)
 
   const element = bel`<div class=${css.app}>
-    <h1 class=${css.title}>${title}</h1>
     <div class=${css.content}>
       <div class=${css.editor}>
         ${textarea}
@@ -48,9 +46,6 @@ async function landingpage ({ title }) {
     diagram = localStorage.diagram = template
     textarea.value = diagram
     render(diagram)
-  }
-  function switchit (event) {
-    console.log("yo yo yo")
   }
 }
 
